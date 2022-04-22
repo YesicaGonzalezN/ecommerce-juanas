@@ -6,13 +6,16 @@
     text-decoration: none;
 }
 
+/* NAVBAR */
+ 
 nav {
     background-color: #fff;
-    padding: 3px 20px 10px;
+    padding: 3px 10px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 5;
 }
 
 .nav-item a {
@@ -39,35 +42,43 @@ nav {
     font-size: 1.1rem;
 }
 
-.fa-solid {
+.lupa, .carrito {
     font-size: 1.5rem;
     color: rgb(143, 142, 142);
     transition: 0.4s;
 }
 
-.fa-solid:hover {
+.lupa:hover,
+.carrito:hover {
     color: hsl(330, 100%, 93%);
     transition: .4s;
 }
 
+
 .items-categorias {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 30px;
+    padding: 10px 10vh;
+    justify-content: center;
+    list-style: none;
 }
 
-.items-categorias .categorias {
+.categorias a{
     font-size: 1.5rem;
-    font-weight: 400;
-    cursor: pointer;
-    transition: 0.3s;
+    text-transform: capitalize;
+    padding: 0 10px;
+    margin: 0 5px;
+    color:#000;
+    opacity: 0.4;
+    transition: .5s;
 }
 
-.items-categorias .categorias:hover {
-    color: rgb(255, 188, 252);
+.categorias a:hover {
+    color: rgb(250, 157, 255);
     transition: .3s;
-}
+} 
+
+/* BANNER MAIN */
 
 .banner-main {
     display: flex;
@@ -77,47 +88,25 @@ nav {
     text-align: center;
     background-image: url("/assets/banner/banner.png");
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .banner-main h4 {
     color: #fff;
-    font-size: 2.5rem;
-}
-
-.banner-main h2 {
-    color: rgb(238, 141, 245);
-    font-size: 2.7rem;
-    margin-top: 20px;
-}
-
-
-.banner-main .ver {
-    font-size: 1.3rem;
+    font-size: 3.6rem;
     font-weight: 400;
-    padding: 10px 30px;
-    color: rgb(238, 141, 245);
-    background-color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    margin-top: 20px;
 }
 
-.banner-main .ver:hover {
-    color: #fff;
-    background-color: rgb(249, 162, 244);
-    transition: 0.4s;
-}
+/* PRODUCTO */
 
 .producto1 {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
     text-align: center;
-    margin-top: 50px;
 }
 
 .producto1 h2 {
@@ -131,38 +120,49 @@ nav {
     font-weight: 300;
 }
 
-.producto1 .pro-container {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
-    flex-wrap: wrap;
-    margin-top: 50px;
+.pro-container {
+   margin: 20px 0;
+   display: flex;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   z-index: 0;
 }
 
-.producto1 .pro {
+.pro-container::-webkit-scrollbar {
+    display: none;
+}
+
+.pro {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 450px;
+    margin-top: 40px;
+    margin-right: 20px;
     font-size: 1.3rem;
-    width: 23%;
-    min-width: 250px;
-    padding: 10px 12px;
     border: 1px solid #cce7d0;
-    border-radius: 25px;
+    border-radius: 7px;
     cursor: pointer;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-    margin: 30px 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     transition: 0.2s ease;
 }
 
 .producto1 .pro:hover {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-.producto1 .pro img {
+.producto-image {
+    height: 70%;
+    object-fit: cover;
+}
+
+.pro img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 7px;
 }
 
-.producto1 .pro .des {
+.des {
     padding: 10px 0;
+    overflow: hidden;
 }
 
 .producto1 .pro .des span {
@@ -177,9 +177,73 @@ nav {
     margin-bottom: 7px;
 }
 
-.producto1 .pro .des i {
+.icon-carrito i {
     font-size: 1.5rem;
+    color:rgb(249, 184, 253);
 }
+
+.producto1 .pre-btn, .producto1 .nxt-btn {
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(250, 174, 255);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index:0;
+}
+
+.pre-btn {
+    left: 10px;
+}
+
+.nxt-btn {
+    right: 10px;
+}
+
+/* COLLECIONES */
+
+.coleccion-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+}
+
+.coleccion {
+    position: relative;
+}
+
+.coleccion img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.coleccion-titulo  {
+    position: absolute;
+    top:50%;
+    left: 40%;
+    transform: translateX(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 2.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.coleccion:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 10px;
+}
+
+/* NEWSLETTER */
 
 .newsletter {
     display: flex;
@@ -299,11 +363,9 @@ footer .redes {
 
 footer .redes i {
     color: rgb(55, 55, 55);
-    padding-right: 15px;
+    padding-right: 0px;
     cursor: pointer;
     font-size: 2rem;
-    margin-right: 15px;
-    margin-left: 15px;
 }
 
 footer .redes i:hover,
@@ -412,6 +474,133 @@ footer a:hover {
     text-align: justify;
 }
 
+/* CONTACTO */
+.banner-contacto, 
+.banner-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("/assets/banner/newsletter.png");
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.banner-contacto h2,
+.banner-carrito h2{
+    color: #000;
+    font-size: 4rem;
+}
+
+.banner-contacto h3 {
+    color: rgb(252, 190, 247);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.contacto-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 10px;
+    margin-bottom: 80px;
+}
+
+.contacto-info .info-detalles {
+    width: 40%;
+}
+
+.contacto-info .info-detalles h4,
+.form-contacto form h4 {
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+.contacto-info .info-detalles p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.contacto-info .info-detalles li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+.contacto-info .info-detalles li i {
+    font-size: 1.6rem;
+    color:rgb(0, 0, 0);
+    padding-right: 25px;
+}
+
+.contacto-info .map {
+    width: 50%;
+    height: 400px;
+}
+
+.contacto-info .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.form-contacto {
+    padding: 20px 10px;
+    margin: 20px;
+    border: 1px solid #dedcdc;
+}
+
+.form-contacto form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-contacto form h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.form-contacto form input,
+.form-contacto form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #bfbfbf;
+    font-size: 1.2rem;
+}
+
+.form-contacto .button-contacto {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 10px 50px;
+    color: #fff;
+    background-color: rgb(243, 183, 246);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+
+.form-contacto .button-contacto:hover {
+    background-color: rgb(238, 141, 245);
+    transition: .4s;
+}
+
+/* CARRITO */
+
+
+
+
+
 @media (max-width: 1200px) {
     .newsletter {
         height: 50vh;
@@ -431,6 +620,13 @@ footer a:hover {
     .form-newsletter .button-newsletter {
         margin: 0 0 10px 10px;
     }
+    .contacto-info {
+        padding: 10px;
+    }
+    .contacto-info .info-detalles ul li  p{
+        font-size: 1.1rem;
+    }
+  
 }
 
 @media (max-width:799px) {
@@ -462,6 +658,17 @@ footer a:hover {
     .form-newsletter .button-newsletter {
         margin: 0 0 80px 20px;
     }
+    .contacto-info {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .contacto-info .info-detalles {
+        width:100%;
+    }
+    .contacto-info .map {
+        width:100%;
+    }
 }
 
 
@@ -478,6 +685,9 @@ footer a:hover {
 
     .prod-detalles .prod-info {
         width: 100%;
+    }
+    .newsletter {
+        height: 25vh;
     }
 }
 /* ---------------------------------------------------------------------- */
