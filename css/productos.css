@@ -1,0 +1,22 @@
+.producto-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.producto-section h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.producto-section p {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.pro-container1 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
