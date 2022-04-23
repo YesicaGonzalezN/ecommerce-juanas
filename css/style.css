@@ -669,6 +669,10 @@ footer a:hover {
     .contacto-info .map {
         width:100%;
     }
+    .coleccion-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -688,6 +692,13 @@ footer a:hover {
     }
     .newsletter {
         height: 25vh;
+    }
+    .coleccion-container {
+        width: 100%;
+        object-fit: cover;
+    }
+    .coleccion-titulo {
+        font-size: 2rem;        
     }
 }
 /* ---------------------------------------------------------------------- */
