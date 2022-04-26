@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Juana's Bags</title>
+    <link rel="stylesheet" href="../css/seller.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&family=Montserrat:wght@100;200;400;500;600;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e5e5058fb4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <img class="loader" src="/assets/loading.gif" alt="Loading">
+
+    <div class="alert-box">
+        <div class="icon-error"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <p class="alert-msg">¡Error!</p>
+    </div>
+
+    <div class="logo1">
+        <h3>Juana's Bags</h3>
+        <h3>Dashboard</h3>
+    </div>
+
+    <div class="dashboard-form hide">
+        <p class="heading">Ser un vendedor</p>
+        <p class="des">¿Quieres formar parte del equipo de revendedoras de Juana's Bags?</p>
+        <button class="btn" id="apply-btn">Aplicar</button>
+    </div>
+
+    <div class="apply-form hide">
+        <input type="text" id="business-name" placeholder="Nombre de la Empresa / Marca">
+        <textarea id="business-add" placeholder="Dirección"></textarea>
+        <textarea id="about" placeholder="Sobre usted..."></textarea>
+        <input type="text" id="number" placeholder="Numero">
+        <button class="submit-btn" id="apply-form-btn">Aplicar</button>
+    </div>
+
+    <div class="product-list hide">
+        <div class="add-product">
+            <p class="add-product-title">Añadir producto</p>
+            <div class="submit-btn">Añadir producto</div>
+        </div>
+        <div class="container-banner"></div>
+        <img class="banner-img" src="../assets/banner/newsletter.png" alt="Banner">
+        <p class="no-products">No hay productos</p>
+    </div>
+    </div>
+
+    <script src="../js/token.js"></script>
+    <script src="../js/seller.js"></script>
+</body>
+
+</html>

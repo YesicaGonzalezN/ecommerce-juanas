@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container-title {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 20px;
+}
+
+    
+.form, .product-price {
+    margin: 50px 40px;
+    border-radius: 10px;
+    background: #ffecff;
+    padding: 30px;
+
+}
+
+.form input,
+textarea {
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(237, 234, 234);
+    background: #ffffff;
+}
+
+.form textarea {
+    width: 80%;
+    height: 30vh;
+    resize: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+::placeholder {
+    color: #000;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.form input {
+    width: 30%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    background-size: cover;
+    border-radius: 10px;
+    grid-row: span 2;
+    text-shadow: 0 0 10px #fff;
+}
+
+
+.text {
+    font-size: 1.2rem;
+}
+
+.upload-image-sec, .select-color {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.select-color {
+    margin-top: 10px;
+}
+
+.text i {
+    margin-right: 15px;
+}
+
+.upload-catalouge {
+    width: 100%;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 20px;
+}
+
+.upload-image {
+    width: 100%;
+    height: 100px;
+    background:#ffe2ff;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.upload-image:hover {
+    background: #feb5ff;
+    background-size: cover;
+}
+
+.colors {
+    margin-top: 30px;
+}
+
+.color-checkbox {
+   appearance: none;
+   width: 100px;
+   height: 70px;
+   border-radius: 5px;
+   border: 1px solid #fb96fd;
+   cursor: pointer;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   position: relative;
+   color: #fd9fff;
+}
+
+.color-checkbox::after {
+    content: attr(value);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.color-checkbox:checked {
+    background: #feadff;
+    color: #fff;
+}
+
+.product-price input {
+    width: 70%;
+    height: 7vh;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(237, 234, 234);
+    background: #ffffff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.product-price {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid: 20px;
+}
+
+.buttons {
+    margin: 20px 0 50px;
+}
+
+.btn {
+    padding: 10px 30px;
+    text-transform: capitalize;
+    color: #FFF;
+    background: #feadff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#save-btn {
+    background: #f9c4fa;
+}
+
+/* alert box */
+.alert-box {
+    width: 400px;
+    min-height: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.alert-box.show {
+    opacity: 1;
+    pointer-events: all;
+    top: 50%;
+}
+
+.icon-error {
+    display: block;
+    text-align: center;
+    margin: 10px auto 20px;
+    height: 100px;
+    color: #fda1ff;
+    font-size: 3.5rem;
+    margin-top: 30px;
+}
+
+.alert-msg {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    display: none;
+}

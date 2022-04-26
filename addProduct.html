@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar producto - Juana's Bags</title>
+    <link rel="stylesheet" href="/css/addProduct.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&family=Montserrat:wght@100;200;400;500;600;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e5e5058fb4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <img class="loader" src="/assets/loading.gif" alt="Loading">
+
+    <div class="alert-box">
+        <div class="icon-error"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <p class="alert-msg">¡Error!</p>
+    </div>
+
+    <div class="container-title">
+        <h3 class="logo">Juana's Bags</h3>
+        <h3 class="logo">Log In</h3>
+    </div>
+
+    <div class="form">
+        <input type="text" id="product-name" placeholder="Nombre del producto">
+        <input type="text" id="short-des" placeholder="Descripción corta del producto">
+        <textarea id="des" placeholder="Detalles"></textarea>
+
+        <div class="product-info">
+            <div class="product-image"><p class="text">Imagen del producto</p></div>
+            <div class="upload-image-sec">
+                <p class="text"><i class="fa-solid fa-camera"></i>Subir Imágen</p>
+                <div class="upload-catalouge">
+                    <input type="file" class="fileupload" id="first-file-ipload-btn" hidden>
+                    <label for="first-file-ipload-btn" class="upload-image"></label>
+                    <input type="file" class="fileupload" id="second-file-ipload-btn" hidden>
+                    <label for="second-file-ipload-btn" class="upload-image"></label>
+                    <input type="file" class="fileupload" id="third-file-ipload-btn" hidden>
+                    <label for="third-file-ipload-btn" class="upload-image"></label>
+                    <input type="file" class="fileupload" id="fourth-file-ipload-btn" hidden>
+                    <label for="fourth-file-ipload-btn" class="upload-image"></label>
+                </div>
+            </div>
+            <div class="select-color">
+                <div class="text">Color disponible</div>
+                <div class="colors">
+                    <input type="checkbox" class="color-checkbox" id="negro" value="negro">
+                    <input type="checkbox" class="color-checkbox" id="suela" value="suela">
+                    <input type="checkbox" class="color-checkbox" id="rosa" value="rosa">
+                    <input type="checkbox" class="color-checkbox" id="blanco" value="blanco">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-price">
+            <input type="number" id="actual-price" placeholder="Precio actual">
+            <input type="number" id="discount" placeholder="Descuento">
+            <input type="number" id="sell-price" placeholder="Precio de venta">
+        </div>
+
+        <input type="number" id="stock" min="20" placeholder="Producto en stock">
+        
+        <textarea id="tags" placeholder="Ingrese la categoría aquí, por ejemplo: Mochilas, Bolsos..."></textarea>
+
+        <div class="buttons">
+            <button class="btn" id="add-btn">Añadir producto</button>
+            <button class="btn" id="save-btn">Guardar borrador</button>
+        </div>
+    </div>
+
+
+    <script src="../js/token.js"></script>
+    <script src="../js/addProduct.js"></script>
+</body>
+
+</html>

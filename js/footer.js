@@ -16,7 +16,7 @@ const createFooter = () => {
         </div>
         <div class="info">
             <h4>Mi cuenta</h4>
-            <a href="/html/signup.html">Ingresar</a>
+            <a href="/login.html">Ingresar</a>
             <a href="#">Ver carrito</a>
             <a href="#">Seguir mi orden</a>
         </div>

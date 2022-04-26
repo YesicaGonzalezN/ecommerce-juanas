@@ -42,18 +42,54 @@ nav {
     font-size: 1.1rem;
 }
 
-.lupa, .carrito {
+.lupa, .carrito, .user {
     font-size: 1.5rem;
     color: rgb(143, 142, 142);
     transition: 0.4s;
+    margin-left: 10px;
 }
 
 .lupa:hover,
-.carrito:hover {
+.carrito:hover,
+.user:hover {
     color: hsl(330, 100%, 93%);
     transition: .4s;
 }
 
+.login-logout-popup {
+    position: absolute;
+    transform: translateX(-70%);
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    top: 40px;
+    width: 200px;
+    transition: .5s;
+    border: 2px solid #f5f5f5;
+}
+
+.account-info {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#user-btn {
+    padding: 10px;
+    background: rgb(243, 183, 246);
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
 
 .items-categorias {
     width: 100%;
@@ -165,12 +201,12 @@ nav {
     overflow: hidden;
 }
 
-.producto1 .pro .des span {
+.producto1 .pro .des .product-brand {
     color: rgb(55, 55, 55);
     font-size: 1.2rem;
 }
 
-.producto1 .pro .des h5 {
+.producto1 .pro .des .prod-des-corta {
     padding-top: 7px;
     font-size: 1.3rem;
     font-weight: 500;

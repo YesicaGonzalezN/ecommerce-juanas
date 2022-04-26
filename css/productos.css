@@ -20,3 +20,107 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+/*  seccion de producto */
+
+.producto-det {
+    width: 100%;
+    padding: 60px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-slider {
+    width: 50%;
+    position: relative;
+    object-fit: cover;
+    margin-right: 50px;
+}
+
+.detalles{
+    width: 50%;
+    margin-top: 50px;
+
+}
+
+.detalles .product-brand {
+    font-size: 2.5rem;
+}
+
+.detalles .prod-des-corta {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+.detalles .prod-precio {
+    font-size: 1.7rem;
+}
+
+.prod-sub-heading {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+    font-weight: 200;
+}
+
+.color-radio-btn {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid rgb(232, 155, 253);
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 0;
+    line-height: 80px;
+    text-transform: uppercase;
+    color: rgb(232, 155, 253);
+    cursor: pointer;
+}
+
+.color-radio-btn.check {
+    background: rgb(232, 155, 253);
+    color: #fff;
+}
+
+.btn-carr-fav {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.btn {
+    width: 40%;
+    padding: 20px;
+    border-radius: 5px;
+    background: none;
+    border: 1px solid rgb(232, 155, 253);
+    color: rgb(232, 155, 253);
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.carrito-btn {
+    background:rgb(232, 155, 253);
+    color: #fff;
+}
+
+.detalle-des {
+    padding: 0 10vw;
+}
+
+.heading-des {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.des {
+    font-size: 1.3rem;
+    margin-bottom: 70px;
+    color: rgb(72, 72, 72);
+}

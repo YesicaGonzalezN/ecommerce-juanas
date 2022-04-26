@@ -17,33 +17,19 @@ body {
 
 .loader {
     position: absolute;
-    font-size: 4rem;
     top: 50%;
-    left: 45%;
+    left:50%;
     transform: translate(-50%, -50%);
     width: 100px;
     display: none;
-    animation: rotate 2s infinite linear;
-    color:rgb(255, 194, 255);
-    visibility: collapse;
 }
 
-@keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-
 .logo {
-    height: 80px;
+    margin-bottom: 30px;
     display: block;
     text-align: center;
     font-size: 2.3rem;
 }
-
 
 input[type="text"],
 input[type="password"],
@@ -89,6 +75,17 @@ input[type="number"] {
     color:#fda1ff;
     background: #fedfff;
     transition: .4s;
+}
+
+
+.link-form {
+    font-size: 1.6rem;
+    color:#fda1ff;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 /* SIGNUP */

@@ -1,60 +1,53 @@
+// redirect to home page if user logged in
+window.onload = () => {
+    if (sessionStorage.user) {
+        user = JSON.parse(sessionStorage.user);
+        if (compareToken(user.authToken, user.email)) {
+            location.replace('/');
+        }
+    }
+}
+
 const loader = document.querySelector('.loader');
 
 // seleccionar inputs
 const submitBtn = document.querySelector('.enviar-btn');
-const nameForm = document.querySelector('#name');
+const namee = document.querySelector('#name') || null;
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
-const number = document.querySelector('#number');
+const number = document.querySelector('#number') || null;
 
 submitBtn.addEventListener('click', () => {
-    if (nameForm.value.length < 3) {
-        showAlert('Nombre debe tener mas de 3 letras...');
-    } else if (!email.value.length){
-        showAlert('Ingrese su email');
-    } else if (password.value.length < 8){
-        showAlert('La contraseña debe tener mas de 8 carácteres');
-    } else if (!number.value.length > 6){
-        showAlert('Número debe tener mas de 6 carácteres');
+    if (namee != null) { // sign up page
+        if (namee.value.length < 3) {
+            showAlert('Nombre debe tener mas de 3 letras...');
+        } else if (!email.value.length) {
+            showAlert('Ingrese su email');
+        } else if (password.value.length < 8) {
+            showAlert('La contraseña debe tener mas de 8 carácteres');
+        } else if (!number.value.length > 6) {
+            showAlert('Número debe tener mas de 6 carácteres');
+        } else {
+            // submit form
+            loader.style.display = 'block';
+            sendData('/signup', {
+                name: namee.value,
+                email: email.value,
+                password: password.value,
+                number: number.value,
+                seller: false
+            })
+        }
     } else {
-        // submit form
-        loader.style.display = 'block';
-        sendData('/signup', {
-            name: nameForm.value,
-            email: email.value,
-            password: password.value,
-            number: number.value,
-            seller: false
-        })
+        // login page
+        if(!email.value.length || !password.value.length){
+            showAlert('Completa todas los items')
+        } else {
+            loader.style.display = 'block';
+            sendData('/login', {
+                email: email.value,
+                password: password.value,
+            })
+        }
     }
 })
-
-// data function
-const sendData = (path, data) => {
-    fetch(path, {
-        method: 'post',
-        headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify(data)
-    }).then((res) => res.json())
-    .then(response => {
-        processData(response);
-    })
-}
-
-const processData = (data) => {
-    loader.style.display = null;
-    if(data.alert){
-        showAlert(data.alert);
-    }
-}
-
-// funcion de alerta
-const showAlert = (msg) => {
-    let alertBox = document.querySelector('.alert-box');
-    let alertMsg = document.querySelector('.alert-msg');
-    alertMsg.innerHTML = msg;
-    alertBox.classList.add('show');
-    setTimeout(() => {
-        alertBox.classList.remove('show');
-    }, 3000)
-}
