@@ -216,6 +216,7 @@ nav {
 .icon-carrito i {
     font-size: 1.5rem;
     color:rgb(249, 184, 253);
+    margin-top: 10px;
 }
 
 .producto1 .pre-btn, .producto1 .nxt-btn {

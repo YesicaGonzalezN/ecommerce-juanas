@@ -10,8 +10,8 @@ colorBtn.forEach((item, i) => {
     })
 })
 
-let productoId = null;
+let productId = null;
 if(location.pathname != '/sproducto'){
-    productoId = decodeURI(location.pathname.split('/').pop());
-    console.log(productoId);
+    productId = decodeURI(location.pathname.split('/').pop());
+    console.log(productId);
 }

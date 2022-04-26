@@ -24,10 +24,10 @@ const createNav = () => {
             </div>
         </div>
             <ul class="items-categorias">
-                <li class="categorias"><a href="/html/bolsos.html">Bolsos</a></li>
-                <li class="categorias"><a href="/html/mochilas.html">Mochilas</a></li>
-                <li class="categorias"><a href="/html/hombre.html">Hombre</a></li>
-                <li class="categorias"><a href="/html/accesorios.html">Accesorios</li>
+                <li class="categorias"><a href="../bolsos.html">Bolsos</a></li>
+                <li class="categorias"><a href="../mochilas.html">Mochilas</a></li>
+                <li class="categorias"><a href="../hombre.html">Hombre</a></li>
+                <li class="categorias"><a href="../accesorios.html">Accesorios</li>
             </ul>
     `
 }
