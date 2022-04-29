@@ -11,8 +11,9 @@
     margin: 20px;
 }
 
-    
-.form, .product-price {
+
+.form,
+.product-price {
     margin: 50px 40px;
     border-radius: 10px;
     background: #ffecff;
@@ -72,12 +73,12 @@ textarea {
     text-shadow: 0 0 10px #fff;
 }
 
-
 .text {
     font-size: 1.2rem;
 }
 
-.upload-image-sec, .select-color {
+.upload-image-sec,
+.select-color {
     background: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -103,7 +104,7 @@ textarea {
 .upload-image {
     width: 100%;
     height: 100px;
-    background:#ffe2ff;
+    background: #ffe2ff;
     cursor: pointer;
     background-size: cover;
 }
@@ -118,16 +119,16 @@ textarea {
 }
 
 .color-checkbox {
-   appearance: none;
-   width: 100px;
-   height: 70px;
-   border-radius: 5px;
-   border: 1px solid #fb96fd;
-   cursor: pointer;
-   margin-bottom: 10px;
-   margin-right: 10px;
-   position: relative;
-   color: #fd9fff;
+    appearance: none;
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid #fb96fd;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: relative;
+    color: #fd9fff;
 }
 
 .color-checkbox::after {
