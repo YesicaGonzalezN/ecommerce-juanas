@@ -1,6 +1,7 @@
 # ecommerce-juanas
 
-E-commerce con HTML, CSS y JavaScript - Juana's Bags.
+E-commerce con HTML, CSS y JavaScript  
+Juana's Bags
 Proyecto final
 https://juanas-bags.vercel.app/
 
