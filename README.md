@@ -1,6 +1,6 @@
 # ecommerce-juanas
 
-Proyecto final de E-commerce con HTML, CSS y JavaScript  
+Proyecto final NUCBA de E-commerce con HTML, CSS y JavaScript  
 - Juana's Bags
 - https://juanas-bags.vercel.app/
 
