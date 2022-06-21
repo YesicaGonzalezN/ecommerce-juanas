@@ -1,6 +1,6 @@
 # ecommerce-juanas
 
-Proyecto final de la carrera Desarrollo Web Full Stack en NUCBA de E-commerce con HTML, CSS y JavaScript  
+Proyecto final de la carrera Desarrollo Web Full Stack en NUCBA: E-commerce con HTML, CSS y JavaScript  
 - Juana's Bags
 - https://juanas-bags.vercel.app/
 
